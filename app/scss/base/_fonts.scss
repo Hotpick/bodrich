@@ -12,4 +12,6 @@
     }
 }
 
-@include font-face('Open Sans', 'Open Sans Light');
+@include font-face('main', 'FuturisCyrillic');
+@include font-face('aReg', 'Arial');
+@include font-face('aBold', 'ArialBold');

@@ -12,9 +12,13 @@
 .wrap {
     min-width: $min-width;
     max-width: $max-width;
-    padding: 0 12px 0 12px;
+    padding: 0 15px 0 15px;
     margin: 0 auto;
     position: relative;
+}
+
+ul, ol {
+    list-style-type: none;
 }
 
 .page-body {
