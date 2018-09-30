@@ -1,3 +1,5 @@
+@import "../utils/_variables";
+
 .page-wrapper {
     min-width: $min-width;
     width: 100%;
@@ -9,12 +11,71 @@
     justify-content: flex-start;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #191919;
+    opacity: .8;
+    z-index: 25;
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+
 .wrap {
     min-width: $min-width;
     max-width: $max-width;
+    width: 100%;
     padding: 0 15px 0 15px;
     margin: 0 auto;
     position: relative;
+}
+
+.page-title {
+    text-align: center;
+    &__inner {
+        padding: 0 0 0 45px;
+        display: inline-block;
+        position: relative;
+    }
+    &__title {
+        font-size: 48px;
+        color: $color-grey;
+        font-family: $aBold;
+        position: relative;
+        z-index: 3;
+    }
+    &__shape {
+        position: absolute;
+        top: -32px;
+        left: 2px;
+    }
+}
+
+.btn {
+    font-family: $aBold;
+    color: $color-grey;
+    background: $color-yellow;
+    display: inline-block;
+    line-height: 40px;
+    height: 40px;
+    white-space: nowrap;
+    padding: 0 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    &--border {
+        background: transparent;
+        border: 1px solid $color-yellow;
+        color: $color-yellow;
+        &:hover {
+            color: $color-black;
+            background: $color-yellow;
+        }
+    }
 }
 
 ul, ol {
@@ -27,29 +88,6 @@ ul, ol {
     flex-grow: 1;
 }
 
-p {
-    @include font($base-font-size, $base-line-height, $text-color);
-    padding: 15px 0 15px 0;
-    font-weight: 400;
-}
-
-h1 {
-    @include font($font-size-h1, $line-height-h1, $title-color);
-    font-family: $title-font-family;
-    padding: 15px 0 15px 0;
-    font-weight: 400;
-}
-
-h2 {
-    @include font($font-size-h2, $line-height-h2, $title-color);
-    font-family: $title-font-family;
-    padding: 15px 0 15px 0;
-    font-weight: 400;
-}
-
-h3 {
-    @include font($font-size-h3, $line-height-h3, $title-color);
-    font-family: $title-font-family;
-    padding: 15px 0 15px 0;
-    font-weight: 400;
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
 }

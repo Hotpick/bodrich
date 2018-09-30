@@ -1,6 +1,6 @@
 /* reset */
 $min-width: 320px;
-$max-width: 1355px;
+$max-width: 1350px;
 $base-bg: #FFF;
 $base-font-size: 13px;
 $base-line-height: 18px;
@@ -15,6 +15,18 @@ $default-transition: all .3s linear;
 $text-color: #000;
 $title-color: #000;
 $title-font-family: $custom-font-family;
+
+//global colors
+$color-white: #fff;
+$color-black: #000;
+$color-grey: #212121;
+$color-light-grey: #bababa;
+$color-yellow: #fff200;
+
+//fonts
+$aReg: 'aReg', Arial, sans-serif;
+$aBold: 'aBold', Arial, sans-serif;
+$main: 'main', Arial, sans-serif;
 
 $font-size-h1: 36px;
 $line-height-h1: 42px;

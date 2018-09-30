@@ -12,38 +12,89 @@
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
-    <symbol id="arrow-left" viewBox="0 0 11 17">
-        <path d="M0.360,7.222 L7.907,0.332 C8.387,-0.107 9.166,-0.107 9.646,0.332 C10.125,0.770 10.125,1.480 9.646,1.919 L2.967,8.015 L9.645,14.112 C10.125,14.550 10.125,15.260 9.645,15.699 C9.165,16.137 8.387,16.137 7.907,15.699 L0.360,8.808 C0.120,8.589 -0.000,8.302 -0.000,8.015 C-0.000,7.728 0.120,7.441 0.360,7.222 Z"/>
+    <symbol id="play" viewBox="0 0 24 24">
+        <polygon points="5 3 19 12 5 21 5 3"></polygon>
     </symbol>
 </svg>
 <div class="page-wrapper">
     <header class="header">
     <div class="wrap">
         <div class="header__content">
-            <div class="header__logo">
-                <img src="img/logo.png" alt="logo">
-            </div>
-            <div class="header__menu">
-                <ul>
-                    <li><a href="#">О Сервисе</a></li>
-                    <li><a href="#">Преимущества</a></li>
-                    <li><a href="#">Цены</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">О Нас</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
+            <a href="#" class="mob-menu-trigger js-menu-trigger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <div class="header__main">
+                <div class="header__logo">
+                    <img src="img/logo.png" alt="logo">
+                </div>
+                <div class="menu js-menu">
+                    <div class="header__logo-mob">
+                        <img src="img/logo-black.png" alt="logo mob">
+                    </div>
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">О Сервисе</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Преимущества</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Цены</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">FAQ</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">О Нас</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="header__btns">
                 <a href="#" class="btn">Заказать Звонок</a>
-                <a href="#" class="btn">Хочу сертификат</a>
+                <a href="#" class="btn btn--border">Хочу сертификат</a>
             </div>
         </div>
     </div>
 </header>
+    <div class="overlay"></div>
     <main class="page-body">
-        <div class="wrap">
-            Hello kek
+        <section class="first-screen">
+    <div class="wrap">
+        <div class="first-screen__content">
+            <div class="first-screen__text">
+                <span class="first-screen__shape"></span>
+                <h1 class="first-screen__title">
+                    <span>зарядись</span>
+                    бодростью
+                </h1>
+                <a href="#" class="first-screen__play">
+                    <svg>
+                        <use xlink:href="play"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="first-screen__photo">
+                <img src="img/team.jpg" alt="team">
+            </div>
         </div>
+    </div>
+</section>
+<section class="about">
+    <div class="page-title">
+        <div class="page-title__inner">
+            <div class="page-title__title">О Сервисе</div>
+            <div class="page-title__shape">
+                <img src="img/shape1.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
     </main>
     <footer class="footer">
     <div class="wrap">
