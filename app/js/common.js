@@ -63,3 +63,30 @@ var mobSlider = (function(){
         }
     }
 })();
+
+var showMore = (function(){
+    var
+        container = $('.js-show-more'),
+        toggleBtn = container.find('.faq__top'),
+        textShow = container.find('.faq__text')
+    ;
+
+    toggleBtn.on('click', function () {
+        var self = $(this);
+
+        if (self.parent().hasClass('open')) {
+            return false;
+        }
+
+        textShow.slideUp();
+        container.removeClass('open');
+
+        self.parent()
+            .toggleClass('open')
+            .find('.faq__text')
+            .slideToggle()
+        ;
+    });
+
+
+})();

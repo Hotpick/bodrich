@@ -65,7 +65,7 @@
 }
 
 .about {
-    padding: 65px 0 0;
+    padding: 65px 0;
     &__title {
         font-family: $aBold;
         font-size: 36px;
@@ -111,10 +111,11 @@
 }
 
 .how {
+    padding: 56px 0 143px;
     &__title {
         font-family: $aBold;
         font-size: 36px;
-        margin-bottom: 84px;
+        margin-bottom: 27px;
     }
     &__video {
         background: $color-black;
@@ -138,7 +139,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        background: transparent;
+        background: $color-black;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -146,6 +147,255 @@
         box-shadow: 0px 3px 43px 0px rgba(0, 0, 0, 0.63);
         .icon {
             fill: $color-yellow;
+        }
+    }
+}
+
+.advantages {
+    padding: 74px 0 84px;
+    background: url("../img/advantages-bg.jpg") top center no-repeat;
+    &__icon {
+        width: 149px;
+        height: 101px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 19px;
+        .icon {
+            fill: $color-yellow;
+            width: 54px;
+            height: 54px;
+        }
+    }
+    &__content {
+        padding: 33px 0 0;
+    }
+    &__text {
+        font-size: 18px;
+        line-height: 24px;
+        color: $color-grey;
+        font-family: $aReg;
+        text-align: center;
+        span {
+            font-family: $aBold;
+        }
+    }
+    &__item {
+        margin-bottom: 81px;
+        &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+            .advantages {
+                &__icon {
+                    background: url("../img/el1.png") center center no-repeat;
+                }
+            }
+        }
+        &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+            .advantages {
+                &__icon {
+                    background: url("../img/el3.png") center center no-repeat;
+                }
+            }
+        }
+    }
+}
+
+.price {
+    padding: 70px 0 209px;
+    background: url("../img/price-bg.jpg") top center no-repeat;
+    .page-title {
+        margin-bottom: 77px;
+        &__shape {
+            top: 34px;
+        }
+    }
+    &__content {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.card {
+    background: $color-grey;
+    width: 458px;
+    border-radius: 5px;
+    padding: 51px 53px 52px;
+    box-shadow: 2px 0px 41.4px 4.6px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    &__main {
+        flex-grow: 1;
+    }
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-white;
+        margin-bottom: 40px;
+        font-size: 30px;
+        position: relative;
+        font-family: $aBold;
+        padding-bottom: 20px;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            height: 3px;
+            width: 48px;
+            border-radius: 1px;
+            background: $color-yellow;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__list {
+        padding:16px 0 34px;
+        &-item {
+            font-family: $main;
+            font-size: 23px;
+            color: $color-white;
+            padding-left: 40px;
+            position: relative;
+            &:not(:last-child) {
+                margin-bottom: 13px;
+            }
+            &:before {
+                content: '';
+                width: 21px;
+                height: 10px;
+                position: absolute;
+                top: 4px;
+                left: 2px;
+                border: 2px solid $color-yellow;
+                border-top-color: transparent;
+                border-right-color: transparent;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    &__text {
+        font-family: $main;
+        font-size: 24px;
+        line-height: 36px;
+        color: $color-white;
+        margin-bottom: 26px;
+    }
+    &__subtitle {
+        font-family: $aBold;
+        font-size: 27px;
+        color: $color-white;
+    }
+    &__price-list {
+        padding: 31px 0 0;
+        .card__price {
+            margin-bottom: 23px;
+        }
+    }
+    &__btn {
+        text-align: center;
+    }
+    &__description {
+        color: $color-white;
+        font-size: 24px;
+        line-height: 35px;
+        font-family: $aReg;
+        margin-bottom: 52px;
+        span {
+            font-family: $aBold;
+            text-transform: uppercase;
+            color: $color-yellow;
+        }
+    }
+    &__price {
+        color: $color-white;
+        text-align: center;
+        font-size: 27px;
+        margin-bottom: 42px;
+        b {
+            font-size: 76px;
+        }
+        span {
+            color: $color-yellow;
+        }
+        &--yellow {
+            color: $color-yellow;
+        }
+    }
+}
+
+.faq {
+    background: $color-grey;
+    padding: 57px 0 0;
+    .page-title {
+        margin-bottom: 77px;
+        &__shape {
+            top: 34px;
+        }
+    }
+    &__container {
+        padding-left: 34px;
+    }
+    &__top {
+        display: inline-flex;
+        margin-bottom: 13px;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+            .faq__title {
+                color: $color-yellow;
+            }
+        }
+    }
+    &__title {
+        font-size: 24px;
+        font-family: $aBold;
+        color: $color-white;
+        padding-left: 44px;
+        span {
+            margin-right: 7px;
+            color: $color-yellow;
+        }
+    }
+    &__text {
+        display: none;
+        background: $color-white;
+        margin: 0 40px 0 9px;
+        font-family: $main;
+        font-size: 17px;
+        line-height: 24px;
+        padding: 20px 21px 20px 42px;
+    }
+    &__shape {
+        flex-shrink: 0;
+        position: relative;
+        width: 26px;
+        height: 26px;
+        span {
+            background: $color-yellow;
+            position: absolute;
+            &:first-child {
+                width: 100%;
+                height: 2px;
+                left: 0;
+                top: calc(50% - 2px);
+            }
+            &:nth-child(2) {
+                height: 100%;
+                width: 2px;
+                top: 0;
+                left: calc(50% - 2px);
+            }
+        }
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 21px;
+        }
+        &.open {
+            .faq {
+                &__shape {
+                    transform: rotate(45deg);
+                }
+            }
         }
     }
 }

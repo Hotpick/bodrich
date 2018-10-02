@@ -89,6 +89,13 @@
         top: -32px;
         left: 2px;
     }
+    &--white {
+        .page-title {
+            &__title {
+                color: $color-white;
+            }
+        }
+    }
 }
 
 .btn {
@@ -96,13 +103,22 @@
     color: $color-grey;
     background: $color-yellow;
     display: inline-block;
-    line-height: 40px;
+    line-height: 38px;
     height: 40px;
     white-space: nowrap;
     padding: 0 16px;
     border-radius: 20px;
+    border: 1px solid transparent;
     font-size: 14px;
+    &--big {
+        padding: 0 55px;
+        border-radius: 26px;
+        height: 54px;
+        line-height: 52px;
+        font-size: 20px;
+    }
     &--border {
+        padding: 0 13px;
         background: transparent;
         border: 1px solid $color-yellow;
         color: $color-yellow;
