@@ -5,7 +5,7 @@
         src: url($filepath + ".eot");
         src: url($filepath + ".eot?#iefix") format('embedded-opentype'),
         url($filepath + ".woff") format('woff'),
-        url($filepath + ".woff") format('woff2'),
+        url($filepath + ".svg") format('svg'),
         url($filepath + ".ttf") format('truetype');
         font-weight: $weight;
         font-style: $style;

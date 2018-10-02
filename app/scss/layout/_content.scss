@@ -58,6 +58,14 @@
 
 .col-x3 {
     @include flex-width(calc(100%/3));
+
+    @media (max-width: 992px) {
+        @include flex-width(calc(100%/2));
+    }
+
+    @media (max-width: 600px) {
+        @include flex-width(calc(100%));
+    }
 }
 
 .page-title {

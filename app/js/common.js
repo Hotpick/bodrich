@@ -26,3 +26,40 @@ var mobMenu = (function() {
         overlay.toggleClass('active');
     });
 })();
+
+var mobSlider = (function(){
+
+    var
+        sld = $(".js-mob-slider"),
+        isActive,
+        $window = $(window)
+    ;
+
+    swiperFunc();
+
+    $window.on('resize', swiperFunc);
+
+    function swiperFunc() {
+        var initNeeded = $window.width() < 600;
+
+        isActive = isActive !== undefined ? isActive : !initNeeded;
+
+        if(initNeeded && !isActive) {
+            sld.slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true
+            });
+
+            isActive = true;
+        }
+        if(!initNeeded && isActive) {
+            if(sld.hasClass('slick-initialized')){
+                sld.slick('unslick');
+            }
+            isActive = false;
+        }
+    }
+})();
