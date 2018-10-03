@@ -63,11 +63,13 @@ var mobSlider = (function(){
 
         if(initNeeded && !isActive) {
             sld.slick({
-                infinite: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: false,
-                dots: true
+                dots: true,
+                variableWidth: true,
+                centerMode: true,
+                adaptiveHeight: true
             });
 
             isActive = true;
@@ -92,6 +94,10 @@ var showMore = (function(){
         var self = $(this);
 
         if (self.parent().hasClass('open')) {
+            self.parent().removeClass('open');
+            self.parent()
+                .find('.faq__text')
+                .slideUp();
             return false;
         }
 

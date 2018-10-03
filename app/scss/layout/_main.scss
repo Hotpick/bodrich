@@ -260,6 +260,31 @@
     }
     &__content {
         padding: 33px 0 0;
+        .slick-dots {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 39px 0 0;
+            li {
+                margin: 0 13px;
+            }
+            button {
+                font-size: 0;
+                height: 16px;
+                width: 16px;
+                background: #ccc;
+                border: 3px solid $color-white;
+                display: block;
+                border-radius: 50%;
+                padding: 0;
+            }
+            .slick-active {
+                button {
+                    border-color: $color-yellow;
+                    background: $color-yellow;
+                }
+            }
+        }
     }
     &__text {
         font-size: 18px;
@@ -273,14 +298,14 @@
     }
     &__item {
         margin-bottom: 81px;
-        &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(7), &:nth-child(8), &:nth-child(9) {
             .advantages {
                 &__icon {
                     background: url("../img/el1.png") center center no-repeat;
                 }
             }
         }
-        &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+        &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(10), &:nth-child(11), &:nth-child(12) {
             .advantages {
                 &__icon {
                     background: url("../img/el3.png") center center no-repeat;
@@ -291,6 +316,24 @@
     @media (max-width: 992px) {
         &__content {
             padding: 16px 0 0;
+        }
+    }
+    @media (max-width: 600px) {
+        padding: 74px 0 10px;
+        &__content {
+            display: block;
+        }
+        &__item {
+            margin-bottom: 0;
+            width: 183px;
+            padding: 0;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: 20px;
+            br {
+                display: none;
+            }
         }
     }
 }
@@ -314,6 +357,7 @@
         }
     }
     @media (max-width: 600px) {
+        padding: 47px 0 49px;
         .page-title {
             margin-bottom: 30px;
             &__shape {
@@ -438,11 +482,11 @@
         margin: 0;
         width: 100%;
         &:not(:last-child) {
-            margin-bottom: 20px;
+            margin-bottom: 28px;
         }
     }
     @media (max-width: 600px) {
-        padding: 32px 36px 52px;
+        padding: 32px 25px 32px 36px;
         &__title {
             font-size: 19px;
             margin-bottom: 13px;
@@ -458,16 +502,55 @@
             b {
                 font-size: 53px;
             }
+            &-list {
+                padding: 23px 0 36px;
+                .card__price {
+                    margin-bottom: 10px;
+                }
+            }
         }
         &__subtitle {
             font-size: 17px;
+        }
+        &__list {
+            padding: 9px 0 22px;
+            &-item {
+                padding-left: 25px;
+                font-size: 15px;
+                &:before {
+                    width: 14px;
+                    height: 7px;
+                    top: 2px;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+        &__text {
+            font-size: 15px;
+            line-height: 28px;
+            margin-bottom: 11px;
+        }
+        &__description {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 32px;
+        }
+        &__btn {
+            .btn {
+                height: 34px;
+                line-height: 35px;
+                font-size: 16px;
+                padding: 0 27px;
+            }
         }
     }
 }
 
 .faq {
     background: $color-grey;
-    padding: 57px 0 0;
+    padding: 57px 0 63px;
     .page-title {
         margin-bottom: 77px;
         &__shape {
@@ -482,9 +565,11 @@
         margin-bottom: 13px;
         align-items: center;
         cursor: pointer;
-        &:hover {
-            .faq__title {
-                color: $color-yellow;
+        @media (min-width: 992px) {
+            &:hover {
+                .faq__title {
+                    color: $color-yellow;
+                }
             }
         }
     }
@@ -531,7 +616,7 @@
     }
     &__item {
         &:not(:last-child) {
-            margin-bottom: 21px;
+            margin-bottom: 24px;
         }
         &.open {
             .faq {
@@ -541,4 +626,36 @@
             }
         }
     }
+    @media (max-width: 992px) {
+        &__container {
+            padding-left: 0;
+        }
+        &__title {
+            padding-left: 10px;
+        }
+        &__text {
+            margin: 0;
+            font-size: 16px;
+            line-height: 22px;
+            padding: 12px 10px 12px 13px;
+        }
+    }
+    @media (max-width: 600px) {
+        .page-title {
+            margin-bottom: 31px;
+            &__shape {
+                top: 22px;
+                left: -28px;
+                width: 66px;
+            }
+        }
+        &__title {
+            font-size: 18px;
+        }
+    }
+}
+
+.contacts {
+    background: url("../img/contacts-bg.jpg") center center no-repeat;
+    background-size: cover;
 }

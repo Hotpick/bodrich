@@ -10,6 +10,30 @@
         @@include('../chunks/p-index.html')
     </main>
     @@include('../chunks/footer.html')
+    <div class="modals" style="display: none;">
+        <div class="modal" id="modal1">
+            <div class="modal__title">Заказать звонок</div>
+            <div class="form modal__form">
+                <input type="text" class="modal__input" placeholder="Имя">
+                <input type="text" class="modal__input" placeholder="Номер телефона">
+                <input type="text" class="modal__input" placeholder="Email">
+                <div class="modat__btn">
+                    <button class="btn" type="submit">Заказать</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal2">
+            <div class="modal__title">Заказать сертификат</div>
+            <div class="form modal__form">
+                <input type="text" class="modal__input" placeholder="Имя">
+                <input type="text" class="modal__input" placeholder="Номер телефона">
+                <input type="text" class="modal__input" placeholder="Email">
+                <div class="modat__btn">
+                    <button class="btn" type="submit">Заказать</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @@include('../chunks/scripts.html')
 </body>
