@@ -62,6 +62,57 @@
         background: $color-yellow;
         box-shadow: 0px 3px 43px 0px rgba(0, 0, 0, 0.63);
     }
+    &__btn {
+        .btn.btn--big {
+            height: 50px;
+            line-height: 54px;
+            font-size: 19px;
+            padding: 0 13px;
+        }
+        @media (min-width: 992px) {
+            display: none;
+        }
+        
+    }
+    @media (max-width: 992px) {
+        padding: 0;
+        margin: 0 -17px;
+        &__play {
+            display: none;
+        }
+        &__photo {
+            height: 520px;
+            width: 100%;
+        }
+        &__shape {
+            display: none;
+        }
+        &__text {
+            top: 0;
+            left: 17px;
+            width: auto;
+            right: 17px;
+            text-align: center;
+            padding-top: 100px;
+        }
+        &__title {
+            font-size: 80px;
+            letter-spacing: 8px;
+        }
+    }
+    @media (max-width: 700px) {
+        &__title {
+            font-size: 38px;
+            letter-spacing: 4px;
+            margin-bottom: 38px;
+            span {
+                letter-spacing: 10px;
+            }
+        }
+        &__photo {
+            height: 370px;
+        }
+    }
 }
 
 .about {
@@ -108,6 +159,33 @@
             background: url("../img/yellow-circle.png") center center no-repeat;
         }
     }
+    @media (max-width: 600px) {
+        padding: 53px 0;
+        &__title {
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 58px;
+        }
+        &__item {
+            text-align: center;
+            &:not(:last-child) {
+                margin-bottom: 52px;
+            }
+        }
+        &__icon {
+            width: 106px;
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+        &__text {
+            font-size: 20px;
+            line-height: 26px;
+            padding: 25px 0 0 0;
+            &:before {
+                left: calc(50% - 16px);
+            }
+        }
+    }
 }
 
 .how {
@@ -129,6 +207,7 @@
             width: 100%;
             height: 100%;
             opacity: .5;
+            object-fit: cover;
         }
     }
     &__play-btn {
@@ -147,6 +226,17 @@
         box-shadow: 0px 3px 43px 0px rgba(0, 0, 0, 0.63);
         .icon {
             fill: $color-yellow;
+        }
+    }
+    @media (max-width: 992px) {
+        padding: 6px 0 0px;
+        &__video {
+            height: 366px;
+        }
+        &__title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            text-align: center;
         }
     }
 }
@@ -198,6 +288,11 @@
             }
         }
     }
+    @media (max-width: 992px) {
+        &__content {
+            padding: 16px 0 0;
+        }
+    }
 }
 
 .price {
@@ -212,6 +307,21 @@
     &__content {
         display: flex;
         justify-content: space-around;
+    }
+    @media (max-width: 778px) {
+        &__content{
+            flex-direction: column;
+        }
+    }
+    @media (max-width: 600px) {
+        .page-title {
+            margin-bottom: 30px;
+            &__shape {
+                top: 18px;
+                left: -22px;
+                width: 71px;
+            }
+        }
     }
 }
 
@@ -318,6 +428,39 @@
         }
         &--yellow {
             color: $color-yellow;
+        }
+    }
+    @media (max-width: 992px) {
+        margin: 0 5px;
+        padding: 51px 36px 52px;
+    }
+    @media (max-width: 778px) {
+        margin: 0;
+        width: 100%;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+    @media (max-width: 600px) {
+        padding: 32px 36px 52px;
+        &__title {
+            font-size: 19px;
+            margin-bottom: 13px;
+            &:after {
+                bottom: 13px;
+                height: 2px;
+                width: 30px;
+            }
+        }
+        &__price {
+            font-size: 18px;
+            margin-bottom: 26px;
+            b {
+                font-size: 53px;
+            }
+        }
+        &__subtitle {
+            font-size: 17px;
         }
     }
 }

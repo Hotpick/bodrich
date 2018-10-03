@@ -16,14 +16,31 @@ if(!window.console.log) window.console.log = function() {};
 var mobMenu = (function() {
     var
         menu = $('.js-menu'),
-        trigger = $('.js-menu-trigger')
+        trigger = $('.js-menu-trigger'),
+        menuItem = menu.find('.menu__link');
     ;
+
+    function closeMenu(){
+        overlay.removeClass('active');
+        trigger.removeClass('active');
+        menu.removeClass('show');
+    };
 
     trigger.on('click', function (e) {
         e.preventDefault();
         $(this).toggleClass('active');
         menu.toggleClass('show');
         overlay.toggleClass('active');
+    });
+
+    overlay.on('click', function () {
+        closeMenu();
+    });
+
+    menuItem.on('click', function (e) {
+        e.preventDefault();
+        // remove prevent default after adding move func
+        closeMenu();
     });
 })();
 
