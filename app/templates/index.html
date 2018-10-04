@@ -7,28 +7,52 @@
     @@include('../chunks/header.html')
     <div class="overlay"></div>
     <main class="page-body">
+        <div class="anchors">
+            <a href="#one" class="active"></a>
+            <a href="#two"></a>
+            <a href="#three"></a>
+            <a href="#four"></a>
+            <a href="#five"></a>
+            <a href="#six"></a>
+            <a href="#seven"></a>
+            <a href="#eight"></a>
+        </div>
         @@include('../chunks/p-index.html')
     </main>
     @@include('../chunks/footer.html')
     <div class="modals" style="display: none;">
         <div class="modal" id="modal1">
-            <div class="modal__title">Заказать звонок</div>
+            <div class="page-title">
+                <div class="page-title__inner">
+                    <div class="page-title__title">Заказать звонок</div>
+                    <div class="page-title__shape">
+                        <img src="img/shape1.png" alt="shape">
+                    </div>
+                </div>
+            </div>
             <div class="form modal__form">
                 <input type="text" class="modal__input" placeholder="Имя">
                 <input type="text" class="modal__input" placeholder="Номер телефона">
                 <input type="text" class="modal__input" placeholder="Email">
-                <div class="modat__btn">
+                <div class="modal__btn">
                     <button class="btn" type="submit">Заказать</button>
                 </div>
             </div>
         </div>
         <div class="modal" id="modal2">
-            <div class="modal__title">Заказать сертификат</div>
+            <div class="page-title">
+                <div class="page-title__inner">
+                    <div class="page-title__title">Заказать сертификат</div>
+                    <div class="page-title__shape">
+                        <img src="img/shape1.png" alt="shape">
+                    </div>
+                </div>
+            </div>
             <div class="form modal__form">
                 <input type="text" class="modal__input" placeholder="Имя">
                 <input type="text" class="modal__input" placeholder="Номер телефона">
                 <input type="text" class="modal__input" placeholder="Email">
-                <div class="modat__btn">
+                <div class="modal__btn">
                     <button class="btn" type="submit">Заказать</button>
                 </div>
             </div>

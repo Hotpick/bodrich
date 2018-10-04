@@ -166,36 +166,46 @@
                     </div>
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a href="#" class="menu__link">О Сервисе</a>
+                            <a href="#two" class="menu__link">О Сервисе</a>
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__link">Преимущества</a>
+                            <a href="#three" class="menu__link">Преимущества</a>
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__link">Цены</a>
+                            <a href="#four" class="menu__link">Цены</a>
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__link">FAQ</a>
+                            <a href="#five" class="menu__link">FAQ</a>
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__link">О Нас</a>
+                            <a href="#six" class="menu__link">О Нас</a>
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__link">Контакты</a>
+                            <a href="#seven" class="menu__link">Контакты</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="header__btns">
-                <a href="#" class="btn">Заказать Звонок</a>
-                <a href="#" class="btn btn--border">Хочу сертификат</a>
+                <a href="#modal1" data-fancybox class="btn">Заказать Звонок</a>
+                <a href="#modal2" data-fancybox class="btn btn--border">Хочу сертификат</a>
             </div>
         </div>
     </div>
 </header>
     <div class="overlay"></div>
     <main class="page-body">
-        <section class="first-screen">
+        <div class="anchors">
+            <a href="#one" class="active"></a>
+            <a href="#two"></a>
+            <a href="#three"></a>
+            <a href="#four"></a>
+            <a href="#five"></a>
+            <a href="#six"></a>
+            <a href="#seven"></a>
+            <a href="#eight"></a>
+        </div>
+        <section class="first-screen js-section" id="one">
     <div class="wrap-big">
         <div class="first-screen__content">
             <div class="first-screen__text">
@@ -219,7 +229,7 @@
         </div>
     </div>
 </section>
-<section class="about">
+<section class="about js-section" id="two">
     <div class="wrap">
         <div class="page-title">
             <div class="page-title__inner">
@@ -297,7 +307,7 @@
         </div>
     </div>
 </section>
-<section class="advantages">
+<section class="advantages js-section" id="three">
     <div class="wrap">
         <div class="page-title">
             <div class="page-title__inner">
@@ -379,7 +389,7 @@
         </div>
     </div>
 </section>
-<section class="price">
+<section class="price js-section" id="four">
     <div class="wrap">
         <div class="page-title">
             <div class="page-title__inner">
@@ -433,7 +443,7 @@
         </div>
     </div>
 </section>
-<section class="faq">
+<section class="faq js-section" id="five">
     <div class="wrap-big">
         <div class="page-title page-title--white">
             <div class="page-title__inner">
@@ -543,7 +553,7 @@
         </div>
     </div>
 </section>
-<section class="about-us">
+<section class="about-us js-section" id="six">
     <div class="wrap">
         <div class="about-us__content">
             <div class="about-us__img"><img src="img/about-img.jpg" alt="about"></div>
@@ -556,6 +566,9 @@
                     </div>
                 </div>
             </div>
+            <div class="about-us__img-mob">
+                <img src="img/about-img-mob.jpg" alt="about">
+            </div>
             <ul class="about-us__list">
                 <li>Мы дружняя команда профессионлов, где каждый на своем месте</li>
                 <li>С апреля 2017 года заботимся о здоровье офисных сотрудников Киева</li>
@@ -566,7 +579,7 @@
         </div>
     </div>
 </section>
-<section class="contacts">
+<section class="contacts js-section" id="seven">
     <div class="wrap">
         <div class="page-title">
             <div class="page-title__inner">
@@ -579,33 +592,34 @@
         <div class="contacts__content">
             <div class="contacts__item">
                 <div class="contacts__icon">
-                    <svg class="icon">
-                        <use xlink:href="#tick"></use>
-                    </svg>
+                    <img src="img/mess.png" alt="mess">
                 </div>
                 <a href="mailto:bodrich.com.ua@gmail.com" class="contacts__link">bodrich.com.ua@gmail.com</a>
             </div>
             <div class="contacts__item">
                 <div class="contacts__icon">
-                    <svg></svg>
+                    <img src="img/phone.png" alt="phone">
                 </div>
                 <a href="tel:+380635783178" class="contacts__link">+380635783178</a>
             </div>
             <div class="contacts__social">
                 <h5>Мы в соцсетях</h5>
+                <span class="contacts__shape"></span>
                 <ul class="social-list">
                     <li>
-                        <a href="#">
+                        <a href="#" class="social-list__inst">
                             <svg class="icon">
                                 <use xlink:href="#instagram"></use>
                             </svg>
+                            <span></span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="social-list__facebook">
                             <svg class="icon">
                                 <use xlink:href="#facebook"></use>
                             </svg>
+                            <span></span>
                         </a>
                     </li>
                 </ul>
@@ -613,26 +627,33 @@
         </div>
     </div>
 </section>
-<section class="career">
+<section class="career js-section" id="eight">
     <div class="wrap">
         <div class="career__content">
-            <div class="career__top">
-                <div class="career__title">Карьера в BODRICH</div>
-                <div class="career__shape">
-                    <img src="" alt="">
+            <div class="career__text">
+                <div class="career__top">
+                    <div class="career__title">Карьера в BODRICH</div>
+                    <div class="career__shape">
+                        <img src="img/shape3.png" alt="shape">
+                    </div>
+                </div>
+                <p>
+                    Мы постоянно открыты к новым учасникам команды,
+                    которые разделяют наши ценности.
+                    Резюме можете отправлять на e-mail сервиса:
+                    <a href="#">bodrich.com.ua@gmail.com</a>
+                </p>
+                <p>
+                    Есть возможность карьерного роста
+                    для тех, кто проявит свои сильные стороны.
+                </p>
+                <div class="career__btn">
+                    <a href="#" class="btn btn--big">Заказать Звонок</a>
                 </div>
             </div>
-            <p>
-                Мы постоянно открыты к новым учасникам команды,
-                которые разделяют наши ценности.
-                Резюме можете отправлять на e-mail сервиса:
-                <a href="#">bodrich.com.ua@gmail.com</a>
-            </p>
-            <p>
-                Есть возможность карьерного роста
-                для тех, кто проявит свои сильные стороны.
-            </p>
-            <a href="#" class="btn btn--big">Заказать Звонок</a>
+            <div class="career__img">
+                <img src="img/career.jpg" alt="career">
+            </div>
         </div>
 
     </div>
@@ -643,32 +664,34 @@
     <div class="wrap">
         <div class="footer__content">
             <div class="footer__logo">
-                <img src="img/logo.png" alt="logo">
+                <img src="img/logo-footer.png" alt="logo">
             </div>
             <div class="footer__menu">
                 <ul>
-                    <li><a href="#">О Сервисе</a></li>
-                    <li><a href="#">Преимущества</a></li>
-                    <li><a href="#">Цены</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">О Нас</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#two" class="js-scroll">О Сервисе</a></li>
+                    <li><a href="#three" class="js-scroll">Преимущества</a></li>
+                    <li><a href="#four" class="js-scroll">Цены</a></li>
+                    <li><a href="#five" class="js-scroll">FAQ</a></li>
+                    <li><a href="#six" class="js-scroll">О Нас</a></li>
+                    <li><a href="#seven" class="js-scroll">Контакты</a></li>
                 </ul>
             </div>
             <div class="footer__social">
-                <ul class="social-list">
+                <ul class="social-list social-list--mini">
                     <li>
-                        <a href="#">
+                        <a href="#" class="social-list__inst">
                             <svg class="icon">
                                 <use xlink:href="#instagram"></use>
                             </svg>
+                            <span></span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="social-list__facebook">
                             <svg class="icon">
                                 <use xlink:href="#facebook"></use>
                             </svg>
+                            <span></span>
                         </a>
                     </li>
                 </ul>
@@ -678,23 +701,37 @@
 </footer>
     <div class="modals" style="display: none;">
         <div class="modal" id="modal1">
-            <div class="modal__title">Заказать звонок</div>
+            <div class="page-title">
+                <div class="page-title__inner">
+                    <div class="page-title__title">Заказать звонок</div>
+                    <div class="page-title__shape">
+                        <img src="img/shape1.png" alt="shape">
+                    </div>
+                </div>
+            </div>
             <div class="form modal__form">
                 <input type="text" class="modal__input" placeholder="Имя">
                 <input type="text" class="modal__input" placeholder="Номер телефона">
                 <input type="text" class="modal__input" placeholder="Email">
-                <div class="modat__btn">
+                <div class="modal__btn">
                     <button class="btn" type="submit">Заказать</button>
                 </div>
             </div>
         </div>
         <div class="modal" id="modal2">
-            <div class="modal__title">Заказать сертификат</div>
+            <div class="page-title">
+                <div class="page-title__inner">
+                    <div class="page-title__title">Заказать сертификат</div>
+                    <div class="page-title__shape">
+                        <img src="img/shape1.png" alt="shape">
+                    </div>
+                </div>
+            </div>
             <div class="form modal__form">
                 <input type="text" class="modal__input" placeholder="Имя">
                 <input type="text" class="modal__input" placeholder="Номер телефона">
                 <input type="text" class="modal__input" placeholder="Email">
-                <div class="modat__btn">
+                <div class="modal__btn">
                     <button class="btn" type="submit">Заказать</button>
                 </div>
             </div>

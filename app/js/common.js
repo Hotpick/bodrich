@@ -38,8 +38,12 @@ var mobMenu = (function() {
     });
 
     menuItem.on('click', function (e) {
+        var
+            href = $(this).attr('href'),
+            target = $(href).offset().top
+        ;
         e.preventDefault();
-        // remove prevent default after adding move func
+        $('body,html').animate({scrollTop: target}, 1500);
         closeMenu();
     });
 })();
@@ -110,6 +114,47 @@ var showMore = (function(){
             .slideToggle()
         ;
     });
+})();
 
+var anchors = (function(){
+    var
+        container = $('.anchors'),
+        anchor = container.find('a'),
+        section = $('.js-section'),
+        sectionNames = [],
+        sectionPositions = []
+    ;
 
+    section.each(function () {
+        sectionNames.push($(this).attr('id'));
+        sectionPositions.push($(this).offset().top);
+    });
+
+    $(window).scroll(function () {
+        var windowPosition = $(window).scrollTop() + 200;
+        sectionPositions.forEach(function (value, i) {
+            if (windowPosition > value) {
+                anchor.removeClass('active')
+                    .eq(i).addClass('active');
+            }
+        });
+    });
+
+    anchor.on('click', function (e) {
+        e.preventDefault();
+        var changePosition = 0;
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top - changePosition
+        }, 500);
+    });
+})();
+
+var goTo = (function(){
+
+    $('.js-scroll').click(function(e){
+        e.preventDefault();
+        var href = $(this).attr('href');
+        var target = $(href).offset().top-65;
+        $('body,html').animate({scrollTop: target}, 1500);
+    });
 })();

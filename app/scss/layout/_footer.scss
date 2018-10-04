@@ -1,6 +1,10 @@
 .footer {
     width: 100%;
     min-width: $min-width;
+    padding: 75px 0 65px;
+    &__logo {
+        width: 268px;
+    }
     &__content {
         display: flex;
         align-items: center;
@@ -12,13 +16,34 @@
         }
         li {
             &:not(:last-child) {
-                margin-right: 15px;
+                margin-right: 24px;
             }
         }
         a {
             color: $color-grey;
             font-family: $aBold;
-            font-size: 20px;
+            font-size: 19px;
+        }
+    }
+    @media (max-width: 1100px) {
+        padding: 24px 0;
+        &__content {
+            justify-content: space-between;
+        }
+        &__logo {
+            width: auto;
+        }
+        &__menu {
+            display: none;
+        }
+    }
+    @media (max-width: 500px) {
+        &__logo {
+            text-align: center;
+            width: 100%;
+        }
+        &__social {
+            display: none;
         }
     }
 }

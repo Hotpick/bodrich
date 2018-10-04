@@ -289,15 +289,6 @@ body.fancybox-iosfix {
   cursor: pointer;
   outline: none; }
 
-.fancybox-button,
-.fancybox-button:visited,
-.fancybox-button:link {
-  color: #ccc; }
-
-.fancybox-button:focus,
-.fancybox-button:hover {
-  color: #fff; }
-
 .fancybox-button[disabled] {
   color: #ccc;
   cursor: default;
@@ -377,11 +368,11 @@ body.fancybox-iosfix {
 .fancybox-close-small:after {
   content: '×';
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: -5px;
+  right: -7px;
   width: 30px;
   height: 30px;
-  font: 22px/30px Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font: 24px/30px Arial,"Helvetica Neue",Helvetica,sans-serif;
   color: #888;
   font-weight: 300;
   text-align: center;
@@ -392,16 +383,6 @@ body.fancybox-iosfix {
   box-sizing: border-box;
   z-index: 2; }
 
-.fancybox-close-small:focus {
-  outline: none; }
-
-.fancybox-close-small:focus:after {
-  outline: 1px dotted #888; }
-
-.fancybox-close-small:hover:after {
-  color: #555;
-  background: #eee; }
-
 .fancybox-slide--image .fancybox-close-small,
 .fancybox-slide--iframe .fancybox-close-small {
   top: 0;
@@ -411,11 +392,6 @@ body.fancybox-iosfix {
 .fancybox-slide--iframe .fancybox-close-small:after {
   font-size: 35px;
   color: #aaa; }
-
-.fancybox-slide--image .fancybox-close-small:hover:after,
-.fancybox-slide--iframe .fancybox-close-small:hover:after {
-  color: #fff;
-  background: transparent; }
 
 .fancybox-is-scaling .fancybox-close-small,
 .fancybox-is-zoomable.fancybox-can-drag .fancybox-close-small {

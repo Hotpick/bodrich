@@ -351,6 +351,9 @@
         display: flex;
         justify-content: space-around;
     }
+    @media (max-width: 992px) {
+        padding: 70px 0 49px;
+    }
     @media (max-width: 778px) {
         &__content{
             flex-direction: column;
@@ -657,12 +660,21 @@
 
 .about-us {
     padding: 40px 0 77px;
+    background: url("../img/ab-vector.png") center right no-repeat;
     &__content {
         display: flex;
     }
     &__img {
         flex-shrink: 0;
         margin: 0 0 0 -370px;
+        &-mob{
+            width: 408px;
+            margin: 0 auto;
+            display: none;
+            img {
+                width: 100%;
+            }
+        }
     }
     .page-title {
         text-align: left;
@@ -692,34 +704,187 @@
             }
         }
     }
+    @media (max-width: 992px) {
+        padding: 0 0 55px;
+        background: #fff;
+        &__content {
+            padding-left: 0;
+        }
+        .page-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        &__img {
+            display: none;
+            &-mob {
+                display: block;
+                margin-bottom: 40px;
+            }
+        }
+        &__text {
+            padding: 165px 0 50px 25px;
+        }
+    }
+    @media (max-width: 600px) {
+        &__text {
+            padding: 71px 0 0 0;
+        }
+        &__list {
+            li {
+                font-size: 16px;
+                line-height: 20px;
+                padding-left: 40px;
+                &:before {
+                    left: 0;
+                    width: 27px;
+                    height: 27px;
+                    background-size: 27px 27px;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 17px;
+                }
+            }
+        }
+    }
+    @media (max-width: 450px) {
+        &__img {
+            &-mob {
+                width: auto;
+                margin: 0 -65px 38px;
+            }
+        }
+    }
 }
 
 .contacts {
-    padding: 115px 0 0;
+    padding: 115px 0 149px;
     background: url("../img/contacts-bg.jpg") center center no-repeat;
     background-size: cover;
 	&__content {
+        padding: 18px 0 0;
 		display: flex;
+        align-items: flex-start;
 	}
+    &__link {
+        font-size: 22px;
+        font-family: $aBold;
+        color: $color-grey;
+    }
+    &__icon {
+        height: 117px;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 26px;
+    }
+    &__item {
+        margin-right: 87px;
+    }
+    &__shape {
+        background: #fff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 1000px;
+    }
+    &__social {
+        position: relative;
+        padding: 30px 0 44px 22px;
+        margin: -13px 0 0 80px;
+        h5 {
+            font-family: $aBold;
+            font-size: 24px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 2;
+        }
+        .social-list {
+            z-index: 2;
+            position: relative;
+        }
+    }
+    @media (max-width: 992px) {
+        margin: 0 -17px;
+        padding-bottom: 0;
+        &__shape {
+            display: none;
+        }
+        &__content {
+            padding: 0;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__icon {
+            justify-content: center;
+            height: auto;
+        }
+        &__item {
+            margin: 0 0 54px;
+        }
+        &__social {
+            padding: 12px 0 44px;
+            text-align: center;
+            margin: 0;
+            width: 100%;
+            background: #fff;
+            .social-list {
+                justify-content: center;
+            }
+        }
+    }
+    @media (max-width: 600px) {
+        padding: 37px 0 0;
+        .page-title {
+            margin-bottom: 32px;
+        }
+        &__link {
+            font-size: 18px;
+        }
+        &__icon {
+            margin-bottom: 22px;
+        }
+    }
 }
 
 .career {
 	background: $color-grey;
+    overflow: hidden;
+    &__top {
+        position: relative;
+    }
 	&__content {
-		padding: 114px 0 50px;
+        position: relative;
+	}
+    &__text {
+        padding: 114px 10px 101px 0;
+        position: relative;
+        z-index: 2;
+        width: 60%;
 		p {
 			font-size: 24px;
 			line-height: 28px;
 			font-family: $aBold;
 			margin-bottom: 19px;
 			color: $color-white;
+            a {
+                color: $color-yellow;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
 		}
 		.btn {
 			margin-top: 28px;
 			padding: 0 15px;
 			font-size: 19px;
 		}
-	}
+    }
+    &__img {
+        position: absolute;
+        top: -91px;
+        left: 50%;
+        margin-left: 140px;
+    }
 	&__title {
 		color: $color-white;
 		font-family: $aBold;
@@ -733,7 +898,86 @@
 	}
 	&__shape {
 		position: absolute;
-		left: 0;
-		bottom: 0;
+        width: 110px;
+        left: -49px;
+        bottom: 7px;
+        img {
+            width: 100%;
+        }
 	}
+    @media (max-width: 992px) {
+        &__img {
+            display: none;
+        }
+        &__text {
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+    @media (max-width: 600px) {
+        &__title {
+            font-size: 26px;
+            padding: 0 0 21px 20px;
+            margin-bottom: 25px;
+        }
+        &__btn {
+            text-align: center;
+        }
+        &__text {
+            padding: 54px 0;
+            p {
+                font-size: 18px;
+                line-height: 22px;
+            }
+            .btn {
+                margin-top: 0;
+            }
+        }
+        &__shape {
+            width: 50px;
+            left: -2px;
+            bottom: 4px;
+        }
+    }
+}
+
+.modal {
+    width: 340px;
+    background: #fff;
+    padding: 32px 25px 25px;
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+    &__input {
+        border: 1px solid #e4e4e4;
+        width: 100%;
+        height: 47px;
+        background: #fff;
+        font-size: 15px;
+        font-family: $main;
+        padding: 0 10px;
+        margin-bottom: 11px;
+    }
+    &__btn {
+        margin-top: 15px;
+        text-align: center;
+        .btn {
+            padding: 0 37px;
+        }
+    }
+    .page-title {
+        margin-bottom: 19px;
+        &__inner {
+            padding: 0;
+        }
+        &__shape {
+            top: -14px;
+            left: 14px;
+            width: 107px;
+        }
+        &__title {
+            font-size: 25px;
+        }
+    }
 }
