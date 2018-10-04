@@ -1,5 +1,24 @@
 .footer {
-    height: 80px;
     width: 100%;
     min-width: $min-width;
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+    &__menu {
+        flex-grow: 1;
+        ul {
+            display: flex;
+        }
+        li {
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+        a {
+            color: $color-grey;
+            font-family: $aBold;
+            font-size: 20px;
+        }
+    }
 }

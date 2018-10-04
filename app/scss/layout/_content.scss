@@ -146,6 +146,22 @@
     }
 }
 
+.social-list {
+    display: flex;
+    li {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+    a {
+        display: block;
+    }
+    svg {
+        width: 50px;
+        height: 50px;
+    }
+}
+
 ul, ol {
     list-style-type: none;
 }

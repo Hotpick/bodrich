@@ -655,7 +655,85 @@
     }
 }
 
+.about-us {
+    padding: 40px 0 77px;
+    &__content {
+        display: flex;
+    }
+    &__img {
+        flex-shrink: 0;
+        margin: 0 0 0 -370px;
+    }
+    .page-title {
+        text-align: left;
+        margin-bottom: 89px;
+    }
+    &__text {
+        padding: 165px 0 0 106px;
+    }
+    &__list {
+        li {
+            font-family: $aBold;
+            font-size: 22px;
+            line-height: 25px;
+            padding-left: 45px;
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -13px;
+                width: 37px;
+                height: 37px;
+                background: url('../img/check.svg') center center no-repeat;
+            }
+            &:not(:last-child) {
+                margin-bottom: 46px;
+            }
+        }
+    }
+}
+
 .contacts {
+    padding: 115px 0 0;
     background: url("../img/contacts-bg.jpg") center center no-repeat;
     background-size: cover;
+	&__content {
+		display: flex;
+	}
+}
+
+.career {
+	background: $color-grey;
+	&__content {
+		padding: 114px 0 50px;
+		p {
+			font-size: 24px;
+			line-height: 28px;
+			font-family: $aBold;
+			margin-bottom: 19px;
+			color: $color-white;
+		}
+		.btn {
+			margin-top: 28px;
+			padding: 0 15px;
+			font-size: 19px;
+		}
+	}
+	&__title {
+		color: $color-white;
+		font-family: $aBold;
+		font-size: 52px;
+		padding-bottom: 34px;
+		margin-bottom: 52px;
+		position: relative;
+		span {
+			color: $color-yellow;
+		}
+	}
+	&__shape {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
 }
