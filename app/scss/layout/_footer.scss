@@ -23,6 +23,23 @@
             color: $color-grey;
             font-family: $aBold;
             font-size: 19px;
+            position: relative;
+            &:after {
+                content: '';
+                height: 5px;
+                width: 0;
+                background: $color-yellow;
+                border-radius: 3px;
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                transition: width linear .3s;
+            }
+            &:hover {
+                &:after {
+                    width: 49%;
+                }
+            }
         }
     }
     @media (max-width: 1100px) {

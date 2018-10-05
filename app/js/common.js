@@ -158,3 +158,53 @@ var goTo = (function(){
         $('body,html').animate({scrollTop: target}, 1500);
     });
 })();
+
+var video = (function(){
+    var
+        btn = $('.js-play'),
+        videoContainer = $('.js-play-container')
+    ;
+    btn.on('click', function (e) {
+        var
+            $this = $(this),
+            videoLink = $this.attr('href');
+        ;
+        e.preventDefault();
+
+        videoContainer.append('<iframe src="' +
+            videoLink +
+            '?rel=0&amp;autoplay=1&amp;controls=0&amp;showinfo=0" frameborder="0"' +
+            ' encrypted-media"' +
+            'allowfullscreen></iframe>'
+        );
+        if($this.hasClass('active')) {
+            videoContainer.find('iframe').remove();
+        }
+        $this.toggleClass('active');
+    });
+})();
+
+var video2 = (function(){
+    var
+        btn = $('.js-play-btn'),
+        container = btn.parent();
+    ;
+    btn.on('click', function (e) {
+        var
+            $this = $(this),
+            videoLink = $this.attr('href');
+        ;
+        e.preventDefault();
+
+        container.append('<iframe src="' +
+            videoLink +
+            '?rel=0&amp;autoplay=1&amp;controls=0&amp;showinfo=0" frameborder="0"' +
+            ' encrypted-media"' +
+            'allowfullscreen></iframe>'
+        );
+        if($this.hasClass('active')) {
+            videoContainer.find('iframe').remove();
+        }
+        $this.toggleClass('active');
+    });
+})();
