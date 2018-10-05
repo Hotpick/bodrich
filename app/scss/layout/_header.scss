@@ -1,8 +1,12 @@
 @import "../utils/_variables";
 
 .header {
-    background: $color-black;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    background: $color-black;
+    z-index: 100;
     min-width: $min-width;
     display: flex;
     padding: 32px 0 30px;

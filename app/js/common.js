@@ -151,6 +151,34 @@ var anchors = (function(){
 
 var goTo = (function(){
 
+    var
+        btn = $('.js-go-up'),
+        check = 1
+    ;
+
+    if(btn.length > 0) {
+        $(window).scroll(function () {
+            var containerCor = $('.page-wrapper').offset().top;
+            var topTarget = $(window).scrollTop();
+            if (check === 1) {
+                if (topTarget >= containerCor) {
+                    check = 2;
+                    btn.show();
+                }
+            } else if (check === 2) {
+                if (topTarget <= containerCor) {
+                    check = 1;
+                    btn.hide();
+                }
+            }
+        });
+    }
+
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $('body,html').animate({scrollTop: 0}, 1500);
+    });
+
     $('.js-scroll').click(function(e){
         e.preventDefault();
         var href = $(this).attr('href');

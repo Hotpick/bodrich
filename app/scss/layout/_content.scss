@@ -115,6 +115,37 @@
     }
 }
 
+.up-link {
+    display: none;
+    position: fixed;
+    right: 75px;
+    z-index: 10;
+    bottom: 28px;
+    background: $color-yellow;
+    border-radius: 50%;
+    width: 70px;
+    color: $color-grey;
+    font-size: 20px;
+    font-family: $aBold;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 73px;
+    height: 70px;
+    box-shadow: 0px 3px 15px 0px rgba(72,72,72,0.15);
+    transition: all linear 0.3s;
+    opacity: .6;
+    @media (min-width: 992px) {
+        &:hover {
+            opacity: 1;
+            transition: all linear 0.3s;
+        }
+    }
+    @media (max-width: 992px) {
+        opacity: 1;
+        right: 15px;
+    }
+}
+
 .btn {
     font-family: $aBold;
     color: $color-grey;
