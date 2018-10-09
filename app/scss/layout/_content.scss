@@ -187,21 +187,19 @@
     }
     a {
         display: block;
-    }
-    svg {
-        width: 66px;
-        height: 66px;
-    }
-    &__inst, &__facebook {
         position: relative;
-        svg {
-            position: relative;
-            z-index: 2;
-        }
         span {
             background: $color-yellow;
             position: absolute;
         }
+        svg {
+            position: relative;
+            z-index: 2;
+        }
+    }
+    svg {
+        width: 66px;
+        height: 66px;
     }
     &__inst {
         span {
@@ -216,6 +214,24 @@
         span {
             width: 31px;
             height: 25px;
+            top: 17px;
+            right: 19px;
+        }
+    }
+    &__linkedin {
+        span {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            top: 17px;
+            right: 19px;
+        }
+    }
+    &__youtube {
+        span {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
             top: 17px;
             right: 19px;
         }
@@ -246,6 +262,24 @@
                     height: 18px;
                     top: 12px;
                     right: 12px;
+                }
+            }
+            &__linkedin {
+                span {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    bottom: 0;
+                    right: 27px;
+                }
+            }
+            &__youtube {
+                span {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    top: 14px;
+                    left: 4px;
                 }
             }
         }

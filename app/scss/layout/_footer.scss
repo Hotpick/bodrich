@@ -4,6 +4,9 @@
     padding: 75px 0 65px;
     &__logo {
         width: 268px;
+        @media (max-width: 1200px) {
+            width: 205px;
+        }
     }
     &__content {
         display: flex;
